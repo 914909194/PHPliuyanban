@@ -29,10 +29,7 @@
 				}else{
 					header("location:reg.php");
 				}
-			}
-			
-			
-			
+			}		
 		}else{
 			echo "<script>alert('输入用户名非法')</script>";
 			echo "<script>location='reg.php'</script>";
@@ -46,7 +43,7 @@
 <meta charset="utf-8">
 <form action="reg.php" method="post">
 	用户名:<input type="text" name="uname"><br />
-	密码:<input type="password" name="pass"><br />
+	密码&nbsp:<input type="password" name="pass"><br />
 	<input type="submit" name="sub" value="注册">	
 
 </form>

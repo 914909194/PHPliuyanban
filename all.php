@@ -1,7 +1,15 @@
+<style>
+	body{
+		background: skyblue;
+	}
+	li{
+		list-style: none;
+		color: red;
+	}
+</style>
 <?php 
 	include "conn.php";
 	if(isset($_GET['bid'])){
-
 		$bid=$_GET['bid'];
 		$sql="update chen set hits=hits+1 where bid='$bid'";
 		$query=mysqli_query($link,$sql);
@@ -16,9 +24,8 @@
 
  ?>
  <h3>标题:<?php echo $arr['title'] ?></h3> 
- <!-- <h3>标题:<?php echo $arr['time'] ?></h3> -->
  <li>时间：<?php echo $arr['time'] ?></li>
  <span>访问率:<?php echo $arr['hits']?></span>
  <hr />
- <p>内容:<?php echo $arr['content']?></p>
+ <p>内容:<br><?php echo $arr['content']?></p>
  <hr />
